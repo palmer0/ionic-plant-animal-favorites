@@ -1,0 +1,7 @@
+{
+  "name": "ionic-plant-animal-favorites",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
