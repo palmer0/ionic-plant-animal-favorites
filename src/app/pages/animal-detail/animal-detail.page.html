@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="animals"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Animal Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="animal" class="ion-no-margin" style="margin: 4px !important">
+    <img [src]="animal.imageUrl" />
+
+    <ion-card-header>
+      <ion-card-title>{{ animal.name }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>{{ animal.description }}</p>
+    </ion-card-content>
+
+    <ion-item lines="none">
+      <ion-label>Is favorite?</ion-label>
+
+      <ion-toggle
+        [(ngModel)]="favorite"
+        (ngModelChange)="toggleFavorite()"></ion-toggle>
+    </ion-item>
+
+    <br />
+  </ion-card>
+</ion-content>

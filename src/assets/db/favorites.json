@@ -1,0 +1,29 @@
+{
+  "database": "favorites.db",
+  "version": 1,
+  "encrypted": false,
+  "mode": "full",
+  "tables": [
+    {
+      "name": "animals",
+      "schema": [
+        {
+          "column": "id",
+          "value": "TEXT NOT NULL PRIMARY KEY"
+        },
+        {
+          "column": "name",
+          "value": "TEXT NOT NULL"
+        },
+        {
+          "column": "description",
+          "value": "TEXT NOT NULL"
+        },
+        {
+          "column": "imageUrl",
+          "value": "TEXT NOT NULL"
+        }
+      ]
+    }
+  ]
+}

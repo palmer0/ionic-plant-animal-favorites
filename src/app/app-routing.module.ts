@@ -7,8 +7,18 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
+    path: 'animals',
+    loadChildren: () =>
+      import('./pages/animal-list/animal-list.module').then( m => m.AnimalListPageModule)
+  },
+  {
+    path: 'animals/:id',
+    loadChildren: () =>
+      import('./pages/animal-detail/animal-detail.module').then( m => m.AnimalDetailPageModule)
+  },
+  {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'animals',
     pathMatch: 'full'
   },
 ];
